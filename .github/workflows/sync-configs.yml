@@ -55,5 +55,4 @@ jobs:
           labels: |
             automated pr
             configuration
-          push-to-fork: false
           delete-branch: false
