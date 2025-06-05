@@ -34,11 +34,14 @@ jobs:
 
       - name: Sync files
         run: |
-          cp -ar shared_configs/. target-repo/
           cd target-repo
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git checkout -B sync-shared-configs
+          git fetch origin sync-shared-configs || true
+          git checkout -B sync-shared-configs origin/sync-shared-configs || git checkout -B sync-shared-configs
+          cd ..
+          cp -ar shared_configs/. target-repo/
+          cd target-repo
           git add .
           git commit -m "chore: Sync shared configurations from shared-configs repository [skip ci]"
           git push -f origin HEAD:sync-shared-configs
