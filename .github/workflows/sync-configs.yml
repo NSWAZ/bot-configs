@@ -28,7 +28,7 @@ jobs:
       - name: Checkout target repository
         uses: actions/checkout@v4
         with:
-          repository: my-org/${{ matrix.repository }}
+          repository: NSWAZ/${{ matrix.repository }}
           token: ${{ secrets.PAT_FOR_SYNC_CONFIGS }}
           path: target-repo
 
