@@ -16,7 +16,7 @@ jobs:
       # 각 대상 리포지토리에 대해 독립적인 작업을 실행
       matrix:
         repository: # 여기에 동기화할 대상 리포지토리 목록을 나열합니다.
-          - auth-bot
+          - auth-bot-docker
 
     steps:
       - name: Checkout shared-configs repository
