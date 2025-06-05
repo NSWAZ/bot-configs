@@ -56,3 +56,4 @@ jobs:
             automated pr
             configuration
           delete-branch: false
+          committer: GitHub Actions <actions@github.com>
