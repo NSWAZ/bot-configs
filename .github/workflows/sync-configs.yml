@@ -22,7 +22,7 @@ jobs:
       - name: Checkout shared-configs repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_FOR_SYNC_CONFIGS }}
           fetch-depth: 0
 
       - name: Checkout target repository
