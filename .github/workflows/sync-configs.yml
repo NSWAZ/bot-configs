@@ -38,6 +38,7 @@ jobs:
           cd target-repo
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
+          git pull origin sync-shared-configs || git checkout -b sync-shared-configs
           git add .
           git commit -m "chore: Sync shared configurations from shared-configs repository [skip ci]"
           git push origin HEAD:sync-shared-configs
